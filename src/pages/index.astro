@@ -1,0 +1,183 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Home">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">PyNetherlands</div>
+            <h1>The home of Python<br />in the Netherlands</h1>
+            <p class="hero-lead">
+                PyNetherlands is a foundation dedicated to backing the Python
+                community in the Netherlands — like organizing PyCon NL, the
+                national Python conference.
+            </p>
+            <div class="hero-actions">
+                <a href="/code-of-conduct" class="btn btn-primary"
+                    >Code of Conduct</a
+                >
+                <a href="/board" class="btn btn-secondary">Meet the board</a>
+                <a
+                    href="https://pycon-nl.org/"
+                    target="_blank"
+                    class="btn btn-secondary">PyCon NL</a
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About the Foundation</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Our mission</h3>
+                    <p>
+                        To foster a welcoming and inclusive Python community in
+                        the Netherlands by providing a reliable organizational
+                        home for PyCon NL and supporting related community
+                        efforts.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Legal structure</h3>
+                    <p>
+                        The PyNetherlands foundation is registered as a <em
+                            >non-profit organization</em
+                        > (stichting) under Dutch law. We operate transparently and
+                        publish our annual financial reports.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🐍</div>
+                    <h3>PyCon NL</h3>
+                    <p>
+                        PyCon NL is the national Python conference of the
+                        Netherlands, bringing together developers, data
+                        scientists, educators, and enthusiasts.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="container">
+            <h2>Quick links</h2>
+            <ul class="quick-links">
+                <li><a href="/board">Board members &rarr;</a></li>
+                <li><a href="/blog">Blog &rarr;</a></li>
+                <li><a href="/financials">Financial reports &rarr;</a></li>
+                <li><a href="/code-of-conduct">Code of Conduct &rarr;</a></li>
+            </ul>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    /* Hero */
+    .hero {
+        background: linear-gradient(135deg, #e8f1f9 0%, #fdf9e8 100%);
+        padding: 5rem 0 4rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+        display: inline-block;
+        background: var(--blue);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 0.3rem 0.75rem;
+        border-radius: 100px;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin: 0 0 1.25rem;
+        color: var(--text);
+    }
+
+    .hero-lead {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 600px;
+        line-height: 1.7;
+        margin: 0 0 2rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    /* About */
+    .about {
+        padding: 4rem 0;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .about-card {
+        background: var(--bg-subtle);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .about-card h3 {
+        font-size: 1rem;
+        margin: 0 0 0.6rem;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    /* Quick links */
+    .links-section {
+        padding: 0 0 4rem;
+    }
+
+    .links-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .quick-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .quick-links a {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+</style>

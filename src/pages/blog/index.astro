@@ -1,0 +1,119 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout title="Blog" description="News and updates from PyNetherlands.">
+    <div class="container page">
+        <header class="page-header">
+            <h1>Blog</h1>
+            <p>News and updates from the PyNetherlands foundation.</p>
+        </header>
+
+        {
+            posts.length > 0 ? (
+                <ul class="post-list">
+                    {posts.map((post) => (
+                        <li class="post-item">
+                            <a href={`/blog/${post.id}`} class="post-link">
+                                <div class="post-meta">
+                                    <time
+                                        datetime={post.data.pubDate.toISOString()}
+                                    >
+                                        {post.data.pubDate.toLocaleDateString(
+                                            "nl-NL",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            },
+                                        )}
+                                    </time>
+                                    {post.data.author && (
+                                        <span class="post-author">
+                                            {post.data.author}
+                                        </span>
+                                    )}
+                                </div>
+                                <h2>{post.data.title}</h2>
+                                <p>{post.data.description}</p>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <div class="empty-state">
+                    <p>No posts yet — check back soon.</p>
+                </div>
+            )
+        }
+    </div>
+</Layout>
+
+<style>
+    .post-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .post-link {
+        display: block;
+        padding: 1.5rem;
+        background: var(--bg);
+        text-decoration: none;
+        color: inherit;
+        transition: background 0.15s;
+    }
+
+    .post-link:hover {
+        background: var(--bg-subtle);
+        text-decoration: none;
+    }
+
+    .post-item + .post-item .post-link {
+        border-top: 1px solid var(--border);
+    }
+
+    .post-meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+    }
+
+    .post-author::before {
+        content: "·";
+        margin-right: 0.75rem;
+    }
+
+    .post-link h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.4rem;
+        color: var(--text);
+    }
+
+    .post-link p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+        line-height: 1.55;
+    }
+
+    .empty-state {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+    }
+</style>

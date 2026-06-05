@@ -1,0 +1,164 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const reports = [
+    // {
+    //     year: 2024,
+    //     label: "Annual report 2024",
+    //     url: "/reports/annual-2024.pdf",
+    // },
+];
+---
+
+<Layout title="Financials" description="Financial reports of PyNetherlands.">
+    <div class="container page">
+        <header class="page-header">
+            <h1>Financial Reports</h1>
+            <p>
+                As a registered Dutch foundation, PyNetherlands is committed to
+                financial transparency. Annual reports are published here after
+                adoption by the board.
+            </p>
+            <br />
+            <p>
+                The foundation and related activities are relying on donations
+                from our generous sponsors. If you have questions or if you'd
+                like to help support our efforts, please reach out to us via <a
+                    href="mailto:info@pynl.org">info@pynl.org</a
+                >
+            </p>
+        </header>
+
+        {
+            reports.length > 0 ? (
+                <div class="table-scroll">
+                    <table class="reports-table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Document</th>
+                                <th />
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {reports.map((r) => (
+                                <tr>
+                                    <td>{r.year}</td>
+                                    <td>{r.label}</td>
+                                    <td>
+                                        <a href={r.url} class="download-link">
+                                            Download PDF &darr;
+                                        </a>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            ) : (
+                <div class="empty-state">
+                    <div class="empty-icon">📄</div>
+                    <h2>No reports published yet</h2>
+                    <p>
+                        Financial reports will appear here once the foundation
+                        has completed its first fiscal year.
+                    </p>
+                </div>
+            )
+        }
+
+        <aside class="transparency-note">
+            <h3>Our commitment to transparency</h3>
+            <p>
+                PyNetherlands operates on a non-profit basis. All income is used
+                to cover the costs of organizing PyCon NL and supporting the
+                Python community in the Netherlands. Board members serve on a
+                voluntary basis and receive no remuneration.
+            </p>
+        </aside>
+    </div>
+</Layout>
+
+<style>
+    /* Table */
+    .table-scroll {
+        overflow-x: auto;
+        margin-bottom: 3rem;
+    }
+
+    .reports-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+    }
+
+    .reports-table th {
+        text-align: left;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+        padding: 0.6rem 1rem;
+        border-bottom: 2px solid var(--border);
+    }
+
+    .reports-table td {
+        padding: 1rem;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+    }
+
+    .download-link {
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+
+    /* Empty state */
+    .empty-state {
+        background: var(--bg-subtle);
+        border: 1px dashed var(--border);
+        border-radius: var(--radius);
+        padding: 3rem 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .empty-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .empty-state h2 {
+        font-size: 1.1rem;
+        margin: 0 0 0.5rem;
+        color: var(--text);
+    }
+
+    .empty-state p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin: 0;
+        max-width: 380px;
+        margin-inline: auto;
+    }
+
+    /* Note */
+    .transparency-note {
+        background: var(--bg-subtle);
+        border-left: 3px solid var(--blue);
+        padding: 1.25rem 1.5rem;
+        border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .transparency-note h3 {
+        font-size: 0.95rem;
+        margin: 0 0 0.5rem;
+    }
+
+    .transparency-note p {
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        line-height: 1.65;
+        margin: 0;
+    }
+</style>

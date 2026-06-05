@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="20" fill="#3776ab"/>
+  <text x="64" y="58"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-weight="900"
+        font-size="60"
+        fill="white"
+        text-anchor="middle"
+        dominant-baseline="middle">Py</text>
+  <text x="64" y="104"
+        font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-weight="900"
+        font-size="32"
+        fill="#ffd43b"
+        text-anchor="middle"
+        dominant-baseline="middle">NL</text>
+</svg>
