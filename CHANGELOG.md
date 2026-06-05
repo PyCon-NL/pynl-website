@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/PyCon-NL/pynl-website/compare/v1.0.0...v1.0.1) (2026-06-05)
+
+
+### Bug Fixes
+
+* set the correct relative link ([#4](https://github.com/PyCon-NL/pynl-website/issues/4)) ([5ec81c6](https://github.com/PyCon-NL/pynl-website/commit/5ec81c6749320a8809cc40ae2e95593897214a86))
+
 ## 1.0.0 (2026-06-05)
 
 
