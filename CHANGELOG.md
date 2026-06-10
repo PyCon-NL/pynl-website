@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/PyCon-NL/pynl-website/compare/v1.0.1...v1.1.0) (2026-06-10)
+
+
+### Features
+
+* add link for Mastodon ([#11](https://github.com/PyCon-NL/pynl-website/issues/11)) ([c8766da](https://github.com/PyCon-NL/pynl-website/commit/c8766da3a441e73b195a7921d73611ad35869134))
+
+
+### Bug Fixes
+
+* fix typo is derks text ([#9](https://github.com/PyCon-NL/pynl-website/issues/9)) ([6f9e2d7](https://github.com/PyCon-NL/pynl-website/commit/6f9e2d79995f463dcf13f0d7c62b968d75efea71))
+
 ## [1.0.1](https://github.com/PyCon-NL/pynl-website/compare/v1.0.0...v1.0.1) (2026-06-05)
 
 
