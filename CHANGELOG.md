@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/PyCon-NL/pynl-website/compare/v1.1.0...v1.1.1) (2026-06-15)
+
+
+### Bug Fixes
+
+* add repo url ([#14](https://github.com/PyCon-NL/pynl-website/issues/14)) ([975ba66](https://github.com/PyCon-NL/pynl-website/commit/975ba66345a2fedcbbb43303530881f6d08f6a6c))
+
 ## [1.1.0](https://github.com/PyCon-NL/pynl-website/compare/v1.0.1...v1.1.0) (2026-06-10)
 
 
