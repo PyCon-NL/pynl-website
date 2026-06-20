@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/PyCon-NL/pynl-website/compare/v1.1.1...v1.2.0) (2026-06-20)
+
+
+### Features
+
+* add rsin as required by anbi ([#20](https://github.com/PyCon-NL/pynl-website/issues/20)) ([7b2870f](https://github.com/PyCon-NL/pynl-website/commit/7b2870f310b7f4bdefa6001280dd1a9a6d129dbe))
+
 ## [1.1.1](https://github.com/PyCon-NL/pynl-website/compare/v1.1.0...v1.1.1) (2026-06-15)
 
 
