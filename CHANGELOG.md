@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/PyCon-NL/pynl-website/compare/v1.2.0...v1.3.0) (2026-06-22)
+
+
+### Features
+
+* add mission and plan ([#22](https://github.com/PyCon-NL/pynl-website/issues/22)) ([a7edef6](https://github.com/PyCon-NL/pynl-website/commit/a7edef6279ce8720f660d7a9d5802b531a1c7b5d))
+
 ## [1.2.0](https://github.com/PyCon-NL/pynl-website/compare/v1.1.1...v1.2.0) (2026-06-20)
 
 
